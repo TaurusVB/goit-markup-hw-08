@@ -1,4 +1,10 @@
 .our-works {
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
+
     &__list {
         display: flex;
     }

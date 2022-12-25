@@ -12,6 +12,8 @@ ul {
 img {
     display: block;
     max-width: 100%;
+    padding: 0;
+    margin: 0;
     height: auto;
 }
 
@@ -21,4 +23,9 @@ input, textarea {
 
 textarea {
     resize: none;
+}
+
+a {
+    text-decoration: none;
+    
 }

@@ -9,11 +9,20 @@ body {
 }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include desktop {
+        padding-bottom: 94px;
+        padding-top: 94px;
+    }
 
     &--no-padding {
-        padding-top: 0;
+        padding-bottom: 0;
+
+        @media screen and (max-width: 1199px) {
+            padding-bottom: 60px;
+        }
     }
 
     &--grey {
@@ -22,15 +31,28 @@ body {
 }
 
 .container {
+    display: block;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
-    width: 1200px;   
+
+    @include mobile {
+        width: $mobile;
+    }
+
+    @include tablet {
+        width: $tablet;
+    }
+
+    @include desktop {
+        width: $desktop;
+    }
+
 }
 
 .global-title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     color: $title-color;
     font-weight: 700;
@@ -44,7 +66,24 @@ body {
 
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
+    font-size: 24px;
+    line-height: 1.17;
     text-decoration: none;
+
+    @include desktop {
+        font-size: 26px;
+        line-height: 1.19;
+    }
+}
+
+.btn--no-padding {
+    padding: 0;
+}
+
+.section--disp-none {
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
 }
